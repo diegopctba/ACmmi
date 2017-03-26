@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="especifica" pageWidth="782" pageHeight="555" orientation="Landscape" columnWidth="782" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA[".\\"]]></defaultValueExpression>
+	</parameter>
+	<field name="artefatoList" class="java.lang.Object">
+		<fieldDescription><![CDATA[artefatoList]]></fieldDescription>
+	</field>
+	<field name="idStatusDefinicao" class="java.lang.String">
+		<fieldDescription><![CDATA[idStatus]]></fieldDescription>
+	</field>
+	<field name="idStatusComentario" class="java.lang.String">
+		<fieldDescription><![CDATA[idStatusComentario]]></fieldDescription>
+	</field>
+	<field name="idpraticaespecifica" class="java.lang.String">
+		<fieldDescription><![CDATA[idpraticaespecifica]]></fieldDescription>
+	</field>
+	<field name="comentario" class="java.lang.String">
+		<fieldDescription><![CDATA[comentario]]></fieldDescription>
+	</field>
+	<field name="areaprocesso" class="java.lang.String"/>
+	<field name="idStatusInstitucionalizacao" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="2" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="3" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="3" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="62" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="8" width="782" height="49" backcolor="#F7F7F7"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField-1" x="11" y="24" width="608" height="17"/>
+				<textElement>
+					<font isItalic="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idpraticaespecifica}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" stretchType="RelativeToTallestObject" x="29" y="39" width="614" height="18"/>
+				<textElement>
+					<font size="9" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{comentario}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" x="643" y="38" width="129" height="18"/>
+				<textElement textAlignment="Right">
+					<font size="9" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idStatusComentario}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="619" y="24" width="153" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idStatusDefinicao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="11" y="10" width="568" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{areaprocesso}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement stretchType="RelativeToBandHeight" x="41" y="54" width="697" height="0"/>
+				<subreportParameter name="artefatoList">
+					<subreportParameterExpression><![CDATA[$F{artefatoList}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$F{artefatoList}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["/home/diego/NetBeansProjects/AppCmmi/src/appcmmi/funcoes/report/artefatoEspecifica.jasper"]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true">
+				<reportElement key="textField" mode="Transparent" x="579" y="10" width="193" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="false" isItalic="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idStatusInstitucionalizacao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band splitType="Stretch"/>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

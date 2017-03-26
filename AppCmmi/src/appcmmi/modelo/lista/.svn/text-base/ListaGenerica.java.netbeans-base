@@ -1,0 +1,63 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.modelo.lista;
+
+import appcmmi.db.pojo.PraticaGenerica;
+import appcmmi.modelo.ListaModelo;
+import java.util.List;
+import javax.swing.event.ListDataListener;
+
+/**
+ *
+ * @author diego
+ */
+public class ListaGenerica extends ListaModelo {
+
+    private List<PraticaGenerica> generica;
+
+    public ListaGenerica() {
+    }
+
+    public ListaGenerica(List<PraticaGenerica> generica) {
+        this.generica = generica;
+    }
+
+    @Override
+    public void setElementAt(Object objeto, int posicao) {
+        generica.set(posicao, (PraticaGenerica)objeto);
+    }
+
+    @Override
+    public void addElement(Object objeto) {
+        generica.add((PraticaGenerica)objeto);
+    }
+
+    @Override
+    public List<PraticaGenerica> getList() {
+        return generica;
+    }
+
+    @Override
+    public void setList(List lista) {
+        generica = lista;
+    }
+
+    public int getSize() {
+        return generica.size();
+    }
+
+    public Object getElementAt(int arg0) {
+        return (PraticaGenerica) generica.get(arg0);
+    }
+
+    public void addListDataListener(ListDataListener arg0) {
+    }
+
+    public void removeListDataListener(ListDataListener arg0) {
+    }
+
+
+}

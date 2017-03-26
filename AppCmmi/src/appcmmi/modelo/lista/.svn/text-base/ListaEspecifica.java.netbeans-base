@@ -1,0 +1,63 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.modelo.lista;
+
+import appcmmi.db.pojo.PraticaEspecifica;
+import appcmmi.modelo.ListaModelo;
+import java.util.List;
+import javax.swing.event.ListDataListener;
+
+/**
+ *
+ * @author diego
+ */
+public class ListaEspecifica extends ListaModelo {
+
+    private List<PraticaEspecifica> especifica;
+
+    public ListaEspecifica() {
+    }
+
+    public ListaEspecifica(List<PraticaEspecifica> especifica) {
+        this.especifica = especifica;
+    }
+
+    @Override
+    public void setElementAt(Object objeto, int posicao) {
+        especifica.set(posicao, (PraticaEspecifica)objeto);
+    }
+
+    @Override
+    public void addElement(Object objeto) {
+        especifica.add((PraticaEspecifica)objeto);
+    }
+
+    @Override
+    public List<PraticaEspecifica> getList() {
+        return especifica;
+    }
+
+    @Override
+    public void setList(List lista) {
+        especifica = lista;
+    }
+
+    public int getSize() {
+        return especifica.size();
+    }
+
+    public Object getElementAt(int arg0) {
+        return (PraticaEspecifica) especifica.get(arg0);
+    }
+
+    public void addListDataListener(ListDataListener arg0) {
+    }
+
+    public void removeListDataListener(ListDataListener arg0) {
+    }
+
+
+}

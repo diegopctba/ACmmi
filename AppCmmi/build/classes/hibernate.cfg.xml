@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!-- 
+XML de configuração do hibernate, indicando o driver, 
+dialeto e as classes mapeadas através dos pojos (appcmmi.db.pojo).
+A url para conexão com o bando de dados fica armazenado nas propriedades.
+-->
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    <mapping class="appcmmi.db.pojo.modelo.Maturidade"/>
+    <mapping class="appcmmi.db.pojo.modelo.AreaProcesso"/>
+    <mapping class="appcmmi.db.pojo.modelo.PraticaEspecifica"/>
+    <mapping class="appcmmi.db.pojo.modelo.PraticaGenerica"/>
+    <mapping class="appcmmi.db.pojo.Avaliador"/>
+    <mapping class="appcmmi.db.pojo.Empresa"/>
+    <mapping class="appcmmi.db.pojo.Ativo"/>
+    <mapping class="appcmmi.db.pojo.avaliacao.Avaliacao"/>
+    <mapping class="appcmmi.db.pojo.avaliacao.AvaliacaoEspecifica"/>
+    <mapping class="appcmmi.db.pojo.avaliacao.AvaliacaoGenerica"/>
+    <mapping class="appcmmi.db.pojo.avaliacao.StatusDefinicao"/>
+    <mapping class="appcmmi.db.pojo.avaliacao.StatusInstitucionalizacao"/>
+    <mapping class="appcmmi.db.pojo.avaliacao.StatusComentario"/>
+    <mapping class="appcmmi.db.pojo.artefato.ArtefatoEspecifica"/>
+    <mapping class="appcmmi.db.pojo.artefato.ArtefatoGenerica"/>
+    <mapping class="appcmmi.db.pojo.artefato.TipoArtefato"/>
+  </session-factory>
+</hibernate-configuration>

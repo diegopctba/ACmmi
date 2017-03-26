@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Avaliacoes" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idmaturidade" class="appcmmi.db.pojo.modelo.Maturidade">
+		<fieldDescription><![CDATA[idmaturidade]]></fieldDescription>
+	</field>
+	<field name="idempresa" class="appcmmi.db.pojo.Empresa">
+		<fieldDescription><![CDATA[idempresa]]></fieldDescription>
+	</field>
+	<field name="dataCriacao" class="java.util.Date">
+		<fieldDescription><![CDATA[dataCriacao]]></fieldDescription>
+	</field>
+	<field name="institucionalizacao" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[institucionalizacao]]></fieldDescription>
+	</field>
+	<field name="definicao" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[definicao]]></fieldDescription>
+	</field>
+	<variable name="qtde" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{idempresa}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="802" height="56" backcolor="#FFFFCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Auditoria CMMi]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None">
+					<font size="14" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Avaliações]]></text>
+			</staticText>
+			<line>
+				<reportElement x="216" y="27" width="379" height="1"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="20"/>
+				<textElement/>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="431" y="0" width="51" height="20"/>
+				<textElement/>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="511" y="0" width="45" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nível]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="661" y="0" width="50" height="20"/>
+				<textElement/>
+				<text><![CDATA[Definição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="711" y="0" width="91" height="20"/>
+				<textElement/>
+				<text><![CDATA[Institucionalização]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="266" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Patrocinador]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="266" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idempresa}.getNomefantasia()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="11" y="21" width="766" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="266" y="3" width="165" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idempresa}.getPatrocinador()]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="431" y="3" width="86" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{dataCriacao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="511" y="3" width="146" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idmaturidade}.toString()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="662" y="0" width="49" height="20">
+					<printWhenExpression><![CDATA[$F{definicao}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="713" y="0" width="89" height="20">
+					<printWhenExpression><![CDATA[$F{institucionalizacao}]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<text><![CDATA[X]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="682" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Página "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="762" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="0" y="3" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="602" y="0" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Total de Avaliações:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="702" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{qtde}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

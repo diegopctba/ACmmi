@@ -1,0 +1,115 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.db.pojo;
+
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+/**
+ *
+ * @author diego
+ */
+@Entity
+@Table(name = "PRATICAGENERICA")
+@NamedQueries({@NamedQuery(name = "PraticaGenerica.findAll", query = "SELECT p FROM PraticaGenerica p"), @NamedQuery(name = "PraticaGenerica.findByIdgenerica", query = "SELECT p FROM PraticaGenerica p WHERE p.idgenerica = :idgenerica"), @NamedQuery(name = "PraticaGenerica.findByDescgenerica", query = "SELECT p FROM PraticaGenerica p WHERE p.descgenerica = :descgenerica"), @NamedQuery(name = "PraticaGenerica.findByNumpraticagenerica", query = "SELECT p FROM PraticaGenerica p WHERE p.numpraticagenerica = :numpraticagenerica")})
+public class PraticaGenerica implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "IDGENERICA")
+    private Integer idgenerica;
+    @Basic(optional = false)
+    @Column(name = "DESCGENERICA")
+    private String descgenerica;
+    @Basic(optional = false)
+    @Column(name = "NUMPRATICAGENERICA")
+    private double numpraticagenerica;
+    @JoinColumn(name = "IDMATURIDADE", referencedColumnName = "IDMATURIDADE")
+    @ManyToOne(optional = false)
+    private Maturidade idmaturidade;
+
+    public PraticaGenerica() {
+    }
+
+    public PraticaGenerica(Integer idgenerica) {
+        this.idgenerica = idgenerica;
+    }
+
+    public PraticaGenerica(Integer idgenerica, String descgenerica, double numpraticagenerica) {
+        this.idgenerica = idgenerica;
+        this.descgenerica = descgenerica;
+        this.numpraticagenerica = numpraticagenerica;
+    }
+
+    public Integer getIdgenerica() {
+        return idgenerica;
+    }
+
+    public void setIdgenerica(Integer idgenerica) {
+        this.idgenerica = idgenerica;
+    }
+
+    public String getDescgenerica() {
+        return descgenerica;
+    }
+
+    public void setDescgenerica(String descgenerica) {
+        this.descgenerica = descgenerica;
+    }
+
+    public double getNumpraticagenerica() {
+        return numpraticagenerica;
+    }
+
+    public void setNumpraticagenerica(double numpraticagenerica) {
+        this.numpraticagenerica = numpraticagenerica;
+    }
+
+    public Maturidade getIdmaturidade() {
+        return idmaturidade;
+    }
+
+    public void setIdmaturidade(Maturidade idmaturidade) {
+        this.idmaturidade = idmaturidade;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idgenerica != null ? idgenerica.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof PraticaGenerica)) {
+            return false;
+        }
+        PraticaGenerica other = (PraticaGenerica) object;
+        if ((this.idgenerica == null && other.idgenerica != null) || (this.idgenerica != null && !this.idgenerica.equals(other.idgenerica))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return numpraticagenerica + " - " + descgenerica;
+    }
+
+}

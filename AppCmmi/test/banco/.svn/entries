@@ -1,0 +1,23 @@
+9
+
+dir
+0
+https://kenai.com/svn/appcmmi~subversion/AppCmmi/test/banco
+https://kenai.com/svn/appcmmi~subversion
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+gerar.java
+file
+
+
+
+add
+

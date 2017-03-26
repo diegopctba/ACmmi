@@ -1,0 +1,73 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.modelo.lista;
+
+import appcmmi.db.pojo.AreaProcesso;
+import appcmmi.modelo.ListaModelo;
+import java.util.List;
+import javax.swing.event.ListDataListener;
+
+/**
+ *
+ * @author diego
+ */
+public class ListaAreaProcesso extends ListaModelo {
+
+    private List<AreaProcesso> areaProcesso;
+
+    public ListaAreaProcesso() {
+    }
+
+    public ListaAreaProcesso(List<AreaProcesso> areaProcesso) {
+        this.areaProcesso = areaProcesso;
+    }
+
+    @Override
+    public void setElementAt(Object objeto, int posicao) {
+        areaProcesso.set(posicao, (AreaProcesso)objeto);
+    }
+
+    @Override
+    public void addElement(Object objeto) {
+        areaProcesso.add((AreaProcesso)objeto);
+    }
+
+    @Override
+    public List<AreaProcesso> getList() {
+        return areaProcesso;
+    }
+
+    @Override
+    public void setList(List lista) {
+        areaProcesso = lista;
+    }
+
+    public int getSize() {
+        return areaProcesso.size();
+    }
+
+    public Object getElementAt(int arg0) {
+        return (AreaProcesso) areaProcesso.get(arg0);
+    }
+
+    public void addListDataListener(ListDataListener arg0) {
+    }
+
+    public void removeListDataListener(ListDataListener arg0) {
+    }
+
+    public Integer getNumAreaProcesso(Integer posicao) {
+        return areaProcesso.get(posicao).getNumareaprocesso();
+    }
+
+    public Integer getIdAreaProcesso(Integer posicao) {
+        return areaProcesso.get(posicao).getIdareaprocesso();
+    }
+
+    public String getDescricao(Integer posicao) {
+        return areaProcesso.get(posicao).getDescareaprocesso();
+    }
+}

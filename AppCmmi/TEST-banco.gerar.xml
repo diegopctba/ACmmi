@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="diego-laptop" name="banco.gerar" tests="1" time="5.947" timestamp="2009-12-12T13:15:15">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/i386" />
+    <property name="java.vm.version" value="14.2-b01" />
+    <property name="java.vm.vendor" value="Sun Microsystems Inc." />
+    <property name="java.vendor.url" value="http://java.sun.com/" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.name" value="Java HotSpot(TM) Server VM" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="user.country" value="BR" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="user.dir" value="/home/diego/NetBeansProjects/AppCmmi" />
+    <property name="java.runtime.version" value="1.6.0_16-b01" />
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/endorsed" />
+    <property name="os.arch" value="i386" />
+    <property name="java.io.tmpdir" value="/tmp" />
+    <property name="line.separator" value="
+" />
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="os.name" value="Linux" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="java.library.path" value="/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/i386/server:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/i386:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/../lib/i386:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/i386/client:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/i386:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/../lib/i386:/usr/java/packages/lib/i386:/lib:/usr/lib" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="50.0" />
+    <property name="sun.management.compiler" value="HotSpot Tiered Compilers" />
+    <property name="os.version" value="2.6.31-16-generic" />
+    <property name="user.home" value="/home/diego" />
+    <property name="user.timezone" value="" />
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="java.specification.version" value="1.6" />
+    <property name="user.name" value="diego" />
+    <property name="java.class.path" value="/usr/local/netbeans-6.7/java2/ant/patches/72080.jar:/usr/local/netbeans-6.7/java2/ant/patches/ant-42275.jar:/usr/local/netbeans-6.7/java2/ant/lib/ant.jar:/usr/local/netbeans-6.7/java2/ant/lib/ant-junit.jar:/usr/local/netbeans-6.7/java2/modules/ext/AbsoluteLayout.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/antlr-2.7.6.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/asm.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/asm-attrs.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/cglib-2.1.3.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/commons-collections-2.1.1.jar:/usr/local/netbeans-6.7/ide11/modules/ext/commons-logging-1.1.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/dom4j-1.6.1.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/ehcache-1.2.3.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/jdbc2_0-stdext.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/jta.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/hibernate3.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/hibernate-tools.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/hibernate-annotations.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/hibernate-commons-annotations.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/hibernate-entitymanager.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/javassist.jar:/usr/local/netbeans-6.7/java2/modules/ext/hibernate/ejb3-persistence.jar:/usr/local/netbeans-6.7/java2/modules/ext/beansbinding-1.2.1.jar:/home/diego/NetBeansProjects/lib/db-derby-10.5.1.1-lib/lib/derby.jar:/home/diego/NetBeansProjects/lib/db-derby-10.5.1.1-lib/lib/derbyclient.jar:/home/diego/NetBeansProjects/lib/db-derby-10.5.1.1-lib/lib/derbyLocale_pt_BR.jar:/home/diego/NetBeansProjects/lib/db-derby-10.5.1.1-lib/lib/derbynet.jar:/home/diego/NetBeansProjects/lib/db-derby-10.5.1.1-lib/lib/derbyrun.jar:/home/diego/NetBeansProjects/lib/db-derby-10.5.1.1-lib/lib/derbytools.jar:/home/diego/NetBeansProjects/lib/iReport/commons-beanutils-1.8.0.jar:/home/diego/NetBeansProjects/lib/iReport/commons-collections-3.2.1.jar:/home/diego/NetBeansProjects/lib/iReport/commons-digester-1.7.jar:/home/diego/NetBeansProjects/lib/iReport/commons-logging-1.1.jar:/home/diego/NetBeansProjects/lib/iReport/groovy-all-1.5.5.jar:/home/diego/NetBeansProjects/lib/iReport/iText-2.1.0.jar:/home/diego/NetBeansProjects/lib/iReport/jasperreports-3.6.2.jar:/home/diego/NetBeansProjects/lib/iReport/jasperreports-chart-themes-3.6.2.jar:/home/diego/NetBeansProjects/lib/iReport/jasperreports-extensions-3.5.3.jar:/home/diego/NetBeansProjects/lib/iReport/jasperreports-fonts-3.6.1.jar:/home/diego/NetBeansProjects/lib/iReport/spring.jar:/home/diego/NetBeansProjects/AppCmmi/build/classes:/home/diego/NetBeansProjects/AppCmmi/src:/usr/local/netbeans-6.7/platform10/modules/ext/junit-4.5.jar:/home/diego/NetBeansProjects/AppCmmi/build/test/classes:/home/diego/NetBeansProjects/AppCmmi/test" />
+    <property name="java.vm.specification.version" value="1.0" />
+    <property name="sun.arch.data.model" value="32" />
+    <property name="java.home" value="/usr/lib/jvm/java-6-sun-1.6.0.16/jre" />
+    <property name="java.specification.vendor" value="Sun Microsystems Inc." />
+    <property name="user.language" value="pt" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="java.version" value="1.6.0_16" />
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/ext:/usr/java/packages/lib/ext" />
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/resources.jar:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/rt.jar:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/jsse.jar:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/jce.jar:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/lib/charsets.jar:/usr/lib/jvm/java-6-sun-1.6.0.16/jre/classes" />
+    <property name="java.vendor" value="Sun Microsystems Inc." />
+    <property name="file.separator" value="/" />
+    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="sun.desktop" value="gnome" />
+    <property name="sun.cpu.isalist" value="" />
+  </properties>
+  <testcase classname="banco.gerar" name="gerarBanco" time="5.827" />
+  <system-out><![CDATA[alter table AVALIACAOESPECIFICA add column idStatusInstitucionalizacao_IDSTATUS integer
+alter table AVALIACAOGENERICA add column idStatusInstitucionalizacao_IDSTATUS integer
+create table STATUSDEFINICAO (IDSTATUS integer not null, DESCRICAO varchar(64), SIGLA varchar(5), primary key (IDSTATUS))
+create table STATUSINSTITUCIONALIZACAO (IDSTATUS integer not null, DESCRICAO varchar(64), SIGLA varchar(5), primary key (IDSTATUS))
+alter table AVALIACAOESPECIFICA add constraint FK187027E33306FA51 foreign key (idStatusInstitucionalizacao_IDSTATUS) references STATUSINSTITUCIONALIZACAO
+alter table AVALIACAOESPECIFICA add constraint FK187027E3158611B7 foreign key (IDSTATUS) references STATUSDEFINICAO
+alter table AVALIACAOGENERICA add constraint FK725478E33306FA51 foreign key (idStatusInstitucionalizacao_IDSTATUS) references STATUSINSTITUCIONALIZACAO
+alter table AVALIACAOGENERICA add constraint FK725478E3158611B7 foreign key (IDSTATUS) references STATUSDEFINICAO
+]]></system-out>
+  <system-err><![CDATA[12/12/2009 11:15:15 org.hibernate.cfg.annotations.Version <clinit>
+INFO: Hibernate Annotations 3.3.1.GA
+12/12/2009 11:15:15 org.hibernate.cfg.Environment <clinit>
+INFO: Hibernate 3.2.5
+12/12/2009 11:15:15 org.hibernate.cfg.Environment <clinit>
+INFO: hibernate.properties not found
+12/12/2009 11:15:15 org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: Bytecode provider name : cglib
+12/12/2009 11:15:15 org.hibernate.cfg.Environment <clinit>
+INFO: using JDK 1.4 java.sql.Timestamp handling
+12/12/2009 11:15:15 org.hibernate.cfg.Configuration configure
+INFO: configuring from resource: /hibernate.cfg.xml
+12/12/2009 11:15:15 org.hibernate.cfg.Configuration getConfigurationInputStream
+INFO: Configuration resource: /hibernate.cfg.xml
+12/12/2009 11:15:15 org.hibernate.cfg.Configuration doConfigure
+INFO: Configured SessionFactory: null
+12/12/2009 11:15:15 org.hibernate.dialect.Dialect <init>
+INFO: Using dialect: org.hibernate.dialect.DerbyDialect
+12/12/2009 11:15:15 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: Running hbm2ddl schema update
+12/12/2009 11:15:15 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: fetching database metadata
+12/12/2009 11:15:15 org.hibernate.connection.DriverManagerConnectionProvider configure
+INFO: Using Hibernate built-in connection pool (not for production use!)
+12/12/2009 11:15:15 org.hibernate.connection.DriverManagerConnectionProvider configure
+INFO: Hibernate connection pool size: 20
+12/12/2009 11:15:15 org.hibernate.connection.DriverManagerConnectionProvider configure
+INFO: autocommit mode: false
+12/12/2009 11:15:16 org.hibernate.connection.DriverManagerConnectionProvider configure
+INFO: using driver: org.apache.derby.jdbc.EmbeddedDriver at URL: jdbc:derby:/home/diego/bd/cmmi;
+12/12/2009 11:15:16 org.hibernate.connection.DriverManagerConnectionProvider configure
+INFO: connection properties: {}
+12/12/2009 11:15:16 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: updating schema
+12/12/2009 11:15:16 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.modelo.Maturidade
+12/12/2009 11:15:16 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Maturidade.findAll => SELECT m FROM Maturidade m
+12/12/2009 11:15:16 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Maturidade.findByIdmaturidade => SELECT m FROM Maturidade m WHERE m.idmaturidade = :idmaturidade
+12/12/2009 11:15:16 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Maturidade.findByTitulo => SELECT m FROM Maturidade m WHERE m.titulo = :titulo
+12/12/2009 11:15:16 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Maturidade.findByDescricao => SELECT m FROM Maturidade m WHERE m.descricao = :descricao
+12/12/2009 11:15:16 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Maturidade.findByNummaturidade => SELECT m FROM Maturidade m WHERE m.nummaturidade = :nummaturidade
+12/12/2009 11:15:16 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.modelo.Maturidade on table MATURIDADE
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.modelo.AreaProcesso
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: AreaProcesso.findAll => SELECT a FROM AreaProcesso a
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: AreaProcesso.findByIdareaprocesso => SELECT a FROM AreaProcesso a WHERE a.idareaprocesso = :idareaprocesso
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: AreaProcesso.findByTitulo => SELECT a FROM AreaProcesso a WHERE a.titulo = :titulo
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: AreaProcesso.findByDescricao => SELECT a FROM AreaProcesso a WHERE a.descricao = :descricao
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: AreaProcesso.findByNumareaprocesso => SELECT a FROM AreaProcesso a WHERE a.numareaprocesso = :numareaprocesso
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.modelo.AreaProcesso on table AREAPROCESSO
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.modelo.PraticaEspecifica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaEspecifica.findAll => SELECT p FROM PraticaEspecifica p
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaEspecifica.findByIdespecifica => SELECT p FROM PraticaEspecifica p WHERE p.idespecifica = :idespecifica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaEspecifica.findByTitulo => SELECT p FROM PraticaEspecifica p WHERE p.titulo = :titulo
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaEspecifica.findByDescricao => SELECT p FROM PraticaEspecifica p WHERE p.descricao = :descricao
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaEspecifica.findByNumpraticaespecifica => SELECT p FROM PraticaEspecifica p WHERE p.numpraticaespecifica = :numpraticaespecifica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.modelo.PraticaEspecifica on table PRATICAESPECIFICA
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.modelo.PraticaGenerica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaGenerica.findAll => SELECT p FROM PraticaGenerica p
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaGenerica.findByIdgenerica => SELECT p FROM PraticaGenerica p WHERE p.idgenerica = :idgenerica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaGenerica.findByTitulo => SELECT p FROM PraticaGenerica p WHERE p.titulo = :titulo
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaGenerica.findByDescricao => SELECT p FROM PraticaGenerica p WHERE p.descricao = :descricao
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: PraticaGenerica.findByNumpraticagenerica => SELECT p FROM PraticaGenerica p WHERE p.numpraticagenerica = :numpraticagenerica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.modelo.PraticaGenerica on table PRATICAGENERICA
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.Avaliador
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Avaliador.findAll => SELECT a FROM Avaliador a
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Avaliador.findByIdavaliador => SELECT a FROM Avaliador a WHERE a.idavaliador = :idavaliador
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Avaliador.findByNome => SELECT a FROM Avaliador a WHERE a.nome = :nome
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Avaliador.findByCpf => SELECT a FROM Avaliador a WHERE a.cpf = :cpf
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.QueryBinder bindQuery
+INFO: Binding Named query: Avaliador.findByRg => SELECT a FROM Avaliador a WHERE a.rg = :rg
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.Avaliador on table AVALIADOR
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.Empresa
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.Empresa on table EMPRESA
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.Ativo
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.Ativo on table ATIVO
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.avaliacao.Avaliacao
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.avaliacao.Avaliacao on table AVALIACAO
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.avaliacao.AvaliacaoEspecifica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.avaliacao.AvaliacaoEspecifica on table AVALIACAOESPECIFICA
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.avaliacao.AvaliacaoGenerica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.avaliacao.AvaliacaoGenerica on table AVALIACAOGENERICA
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.avaliacao.StatusDefinicao
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.avaliacao.StatusDefinicao on table STATUSDEFINICAO
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.avaliacao.StatusInstitucionalizacao
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.avaliacao.StatusInstitucionalizacao on table STATUSINSTITUCIONALIZACAO
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.avaliacao.StatusComentario
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.avaliacao.StatusComentario on table StatusComentario
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.artefato.ArtefatoEspecifica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.artefato.ArtefatoEspecifica on table ARTEFATOESPECIFICA
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.artefato.ArtefatoGenerica
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.artefato.ArtefatoGenerica on table ArtefatoGenerica
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationBinder bindClass
+INFO: Binding entity from annotated class: appcmmi.db.pojo.artefato.TipoArtefato
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.EntityBinder bindTable
+INFO: Bind entity appcmmi.db.pojo.artefato.TipoArtefato on table TIPOARTEFATO
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.modelo.Maturidade.areaProcessoList -> AREAPROCESSO
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.modelo.Maturidade.praticaGenericaList -> PRATICAGENERICA
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.modelo.AreaProcesso.praticaEspecificaList -> PRATICAESPECIFICA
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.Empresa.ativoList -> ATIVO
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.Empresa.avaliacaoList -> AVALIACAO
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.avaliacao.Avaliacao.avaliacaoEspecificaList -> AVALIACAOESPECIFICA
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.avaliacao.Avaliacao.avaliacaoGenericaList -> AVALIACAOGENERICA
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.avaliacao.AvaliacaoEspecifica.artefatoList -> ARTEFATOESPECIFICA
+12/12/2009 11:15:17 org.hibernate.cfg.annotations.CollectionBinder bindOneToManySecondPass
+INFO: Mapping collection: appcmmi.db.pojo.avaliacao.AvaliacaoGenerica.artefatoList -> ArtefatoGenerica
+12/12/2009 11:15:17 org.hibernate.cfg.AnnotationConfiguration secondPassCompile
+INFO: Hibernate Validator not found: ignoring
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.AREAPROCESSO
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idareaprocesso, titulo, sigla, numareaprocesso, descricao, idmaturidade]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fk15448b6d1a31c916]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191132910, sql091207191133960]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.ARTEFATOESPECIFICA
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idativo, idavaliacaoespecifica, idartefatoespecifica, idtipoartefato, descricao]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fkdf1cf682a00f0f42, fkdf1cf68244387935, fkdf1cf68227340548]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191133080, sql091207191134130, sql091207191134060, sql091207191134030]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.ATIVO
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idativo, nome, descricao, idempresa]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fk3bb43af6897bfb6]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191133120, sql091207191134200]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.AVALIACAO
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [datacriacao, datainicio, idavaliacao, definicao, datafim, senha, idmaturidade_idmaturidade, idempresa_idempresa, institucionalizacao, comentario]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [idmaturidade, idempresa]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191134260, sql091207191133170, sql091207191134350]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.AVALIACAOESPECIFICA
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idstatuscomentario, idavaliacaoespecifica, idstatus, idpraticaespecifica_idespecifica, idavaliacao_idavaliacao, comentario]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fk187027e3fb0ac958, fk187027e35e5bdc17, fk187027e3d1cdfe75, fk187027e364c44020]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191134670, sql091207191134520, sql091207191134600, sql091207191133210, sql091207191134430]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.AVALIACAOGENERICA
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idstatuscomentario, idareaprocesso, idavaliacaogenerica, idstatus, idpraticagenerica_idgenerica, idavaliacao_idavaliacao, comentario]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fk725478e3d1cdfe75, fk725478e364c44020, fk725478e3d999c3fc, fk725478e35e5bdc17, fk725478e3abde4b58]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191134770, sql091207191134890, sql091207191135110, sql091207191134840, sql091207191133250, sql091207191135190]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.AVALIACAO_ATIVO
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [ativolist_idativo, avaliacao_idavaliacao]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fk2c0f88696a2f7e5b, fk2c0f886991dce5f0]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191135360, sql091207191135240]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.AVALIACAO_AVALIADOR
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [avaliadorlist_idavaliador, avaliacao_idavaliacao]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fk261d3da96a2f7e5b, fk261d3da9f876bbb0]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191135450, sql091207191135420]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.AVALIADOR
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idavaliador, rg, nome, cpf]
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: []
+12/12/2009 11:15:19 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191133400]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.ARTEFATOGENERICA
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idativo, idavaliacaogenerica, idartefatogenerica, idtipoartefato, descricao]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fka2152b8227340548, fka2152b821928a2f5, fka2152b82a00f0f42]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191135610, sql091207191135710, sql091207191133420, sql091207191135520]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.EMPRESA
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [patrocinador, contato, complemento, razaosocial, email, telefone, nomefantasia, cnpj, endereco, inscricaoestadual, numero, idempresa]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: []
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [insestadual, cnpj, sql091207191133480]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.MATURIDADE
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [titulo, nummaturidade, descricao, idmaturidade]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: []
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191133520]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.PRATICAESPECIFICA
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idareaprocesso, titulo, idespecifica, descricao, numpraticaespecifica]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fk5118e4bcd999c3fc]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191135950, sql091207191133600]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.PRATICAGENERICA
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [numpraticagenerica, titulo, idgenerica, descricao, idmaturidade]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: [fk278897fc1a31c916]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191133670, sql091207191135990]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: table not found: STATUSDEFINICAO
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: table not found: STATUSINSTITUCIONALIZACAO
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.STATUSCOMENTARIO
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idstatuscomentario, descricao]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: []
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191133750]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.TIPOARTEFATO
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [idtipoartefato, descricao]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: []
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: [sql091207191133870]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: table not found: STATUSDEFINICAO
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.DatabaseMetadata getTableMetadata
+INFO: table not found: STATUSINSTITUCIONALIZACAO
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: table found: .APP.HIBERNATE_UNIQUE_KEY
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: columns: [next_hi]
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: foreign keys: []
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.TableMetadata <init>
+INFO: indexes: []
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+SEVERE: Unsuccessful: alter table AVALIACAOESPECIFICA add constraint FK187027E3158611B7 foreign key (IDSTATUS) references STATUSDEFINICAO
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+SEVERE: A restrição da chave estrangeira 'FK187027E3158611B7' não pode ser incluída ou ativada na tabela AVALIACAOESPECIFICA, porque uma ou mais chaves estrangeiras não possuem chaves referenciadas correspondentes.
+12/12/2009 11:15:20 org.hibernate.tool.hbm2ddl.SchemaUpdate execute
+INFO: schema update complete
+12/12/2009 11:15:20 org.hibernate.connection.DriverManagerConnectionProvider close
+INFO: cleaning up connection pool: jdbc:derby:/home/diego/bd/cmmi;
+]]></system-err>
+</testsuite>

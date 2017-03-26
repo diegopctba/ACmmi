@@ -1,0 +1,223 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package appcmmi;
+
+import appcmmi.form.empresa.Cad_Auditor;
+import appcmmi.form.empresa.Cad_Empresa;
+import appcmmi.form.avaliacao.Avaliacao;
+import appcmmi.form.avaliacao.NovaAvaliacao;
+import appcmmi.form.especificacao.Especificacao;
+import appcmmi.form.especificacao.NovaEspecificacao;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JDesktopPane;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JSeparator;
+import javax.swing.KeyStroke;
+
+/**
+ *
+ * @author Alexandre
+ */
+public class MainFrame extends javax.swing.JFrame {
+
+    private static JDesktopPane pane;
+
+    public MainFrame() {
+        setTitle("Avaliação de Auditoria");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //System.out.println(JFrame.MAXIMIZED_BOTH);
+        setSize(1600, 1200);
+        //Cola o DesktopPane no JFrame principal
+        pane = new JDesktopPane();
+        pane.setBackground(Color.gray);
+        setContentPane(pane);
+        // pane.add(janela);
+        // JPanel interno = new JPanel();
+        //interno.setSize(200, 600);
+        //interno.setMaximizable(false);
+        //interno.setClosable(false);
+        //interno.setIconifiable(false);
+        //interno.setVisible(true);
+
+        // janela.add(interno);
+        /*JPanel statusPanel = new JPanel();
+        statusPanel.setLocation(this.);
+        statusPanel.setSize(new Dimension(10, 10));
+        statusPanel.setVisible(true);
+        pane.add(statusPanel);*/
+
+
+        //Adiciona a  barra Menu no JFrame Principal
+        JMenuBar menu = new JMenuBar();
+        JMenu menuAvaliacao = new JMenu("Avaliação");
+
+        JMenu menuEspecificacao = new JMenu("Especificação");
+        JMenu menuCadastro = new JMenu("Cadastro");
+        JMenu menuAjuda = new JMenu("Ajuda");
+        JMenuItem sairDireto = new JMenuItem("Sair");
+        menu.add(menuAvaliacao);
+        menu.add(menuEspecificacao);
+        menu.add(menuCadastro);
+        menu.add(menuAjuda);
+        menu.add(sairDireto);
+
+        //Insere os atalhos utilizados junto com o botão ALT
+        menuAvaliacao.setMnemonic(KeyEvent.VK_A);
+        menuEspecificacao.setMnemonic(KeyEvent.VK_E);
+        menuCadastro.setMnemonic(KeyEvent.VK_C);
+        menuAjuda.setMnemonic(KeyEvent.VK_U);
+
+        sairDireto.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+                System.exit(0);
+            }
+        });
+
+        //Criando um item a ser adiciona no Menu1
+        JMenuItem novaAvaliacao = new JMenuItem("Novo");
+        JMenuItem abrirAvaliacao = new JMenuItem("Abrir");
+
+        JMenuItem sair = new JMenuItem("Sair");
+
+        JMenu arquivos = new JMenu("Arquivos");
+        JMenuItem importar = new JMenuItem("Importar");
+        JMenuItem exportar = new JMenuItem("Exportar");
+        arquivos.add(importar);
+        arquivos.add(exportar);
+
+        sair.setToolTipText("Fecha o sistema.");
+        menuAvaliacao.add(novaAvaliacao);
+        menuAvaliacao.add(abrirAvaliacao);
+        menuAvaliacao.add(new JSeparator());
+        menuAvaliacao.add(arquivos);
+        menuAvaliacao.add(new JSeparator());
+        menuAvaliacao.add(sair);
+        //Adiciona uma ação no botão no menu
+        novaAvaliacao.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_MASK));
+        novaAvaliacao.setToolTipText("Crie uma nova avaliação.");
+        novaAvaliacao.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                        NovaAvaliacao novaAvaliacao = new NovaAvaliacao();
+                        pane.add(novaAvaliacao);
+                        pane.setPosition(novaAvaliacao, 0);
+            }
+        });
+        abrirAvaliacao.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_A, KeyEvent.CTRL_MASK));
+        abrirAvaliacao.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+                        Avaliacao avaliacao = new Avaliacao();
+                        pane.add(avaliacao);
+                        pane.setPosition(avaliacao, 0);
+            }
+        });
+        sair.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, KeyEvent.CTRL_MASK));
+        sair.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+
+                System.exit(0);
+            }
+        });
+
+        //Menu2
+        JMenuItem especificacao = new JMenuItem("Especificação");
+        especificacao.setToolTipText("Visualize, edite ou remova itens da especificação CMMI.");
+        menuEspecificacao.add(especificacao);
+        especificacao.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+                Especificacao especificao = new Especificacao();
+                especificao.setClosable(true);
+                especificao.setMaximizable(true);
+                especificao.setTitle("Especificação CMMI");
+                pane.add(especificao);
+                pane.setPosition(especificao, 0);
+            }
+        });
+
+        JMenuItem novaEspecificacao = new JMenuItem("Nova Especifcação");
+        menuEspecificacao.add(novaEspecificacao);
+        novaEspecificacao.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+                NovaEspecificacao nova = new NovaEspecificacao();
+                nova.setVisible(true);
+                nova.setTitle("Nova Especificação");
+                pane.add(nova);
+                pane.setPosition(nova, 0);
+            }
+        });
+        //Menu Ajuda
+        JMenuItem sobre = new JMenuItem("Sobre...");
+        sobre.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+                JDialog dialog = new JDialog();
+                dialog.setTitle("Sobre...");
+                dialog.setVisible(true);
+                dialog.setSize(200, 200);
+                dialog.setLocation(100, 100);
+                dialog.add(new JLabel("Sobre"));
+            }
+        });
+        menuAjuda.add(sobre);
+
+        //Menu Cadastro
+        JMenuItem itemAuditor = new JMenuItem("Auditor");
+        JMenuItem itemEmpresa = new JMenuItem("Empresa");
+        menuCadastro.add(itemAuditor);
+        menuCadastro.add(itemEmpresa);
+        itemAuditor.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+                Cad_Auditor auditor = new Cad_Auditor();
+                pane.add(auditor);
+                pane.setPosition(auditor, 0);
+            }
+        });
+        itemEmpresa.addActionListener(new ActionListener() {
+
+            public void actionPerformed(ActionEvent arg0) {
+                Cad_Empresa empresa = new Cad_Empresa();
+                pane.add(empresa);
+                pane.setPosition(empresa, 0);
+            }
+        });
+
+        //Adiciona o Menu já pronto no JFrame principal
+        setJMenuBar(menu);
+
+        //Setando menu visivel
+        menu.setVisible(true);
+
+        //Setando a tela visivel
+        pane.setVisible(true);
+
+        //Setando o JFrame principal como visivel
+        setVisible(true);
+    }
+
+    public static JDesktopPane getPane() {
+        return pane;
+    }
+
+    public static void setPane(JDesktopPane pane) {
+        MainFrame.pane = pane;
+    }
+}

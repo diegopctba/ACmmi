@@ -1,0 +1,48 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package appcmmi.db.dao;
+
+import appcmmi.db.pojo.Maturidade;
+import java.util.ArrayList;
+import java.util.List;
+import org.hibernate.Query;
+
+/**
+ *
+ * @author diego
+ */
+public class MaturidadeDao extends Dao {
+
+    public MaturidadeDao() throws Exception {
+        super(Maturidade.class);
+    }
+
+    public Maturidade carregaMaturidade(Integer id) throws Exception {
+        return (Maturidade) super.carregar(id);
+    }
+
+    public void salvarMaturidade(Maturidade maturidade) throws Exception {
+        super.salvar(maturidade);
+    }
+
+    public void deletarMaturidade(Maturidade maturidade) throws Exception {
+        super.excluir(maturidade);
+    }
+
+    public void atualizarMaturidade(Maturidade maturidade) throws Exception {
+        super.atualizar(maturidade);
+    }
+
+    public List<Maturidade> listaTodasMaturidade() throws Exception {
+        List<Maturidade> listaMaturidade = new ArrayList<Maturidade>();
+        StringBuffer sql = new StringBuffer("SELECT m FROM ");
+        sql.append(Maturidade.class.getName());
+        sql.append(" m ORDER BY numMaturidade ");
+        Query query = session.createQuery(sql.toString());
+        listaMaturidade = query.list();
+
+        return listaMaturidade;
+    }
+}

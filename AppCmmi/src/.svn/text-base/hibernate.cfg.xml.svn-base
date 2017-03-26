@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+    <property name="hibernate.connection.url">jdbc:derby:cmmi;</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.format_sql">true</property>
+    <!--<property name="hibernate.c3p0.min_size">5</property>
+    <property name="hibernate.c3p0.max_size">20</property>
+    <property name="hibernate.c3p0.timeout">180</property>
+    <property name="hibernate.c3p0.idle_test_period">100</property>-->
+    <mapping class="appcmmi.db.pojo.Maturidade"/>
+    <mapping class="appcmmi.db.pojo.AreaProcesso"/>
+    <mapping class="appcmmi.db.pojo.PraticaEspecifica"/>
+    <mapping class="appcmmi.db.pojo.PraticaGenerica"/>
+  </session-factory>
+</hibernate-configuration>

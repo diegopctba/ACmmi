@@ -1,0 +1,89 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.db.facade;
+
+import appcmmi.db.dao.MaturidadeDao;
+import appcmmi.db.pojo.Maturidade;
+import appcmmi.modelo.tabela.ModeloTabelaMaturidade;
+import java.util.List;
+
+/**
+ *
+ * @author diego
+ */
+public class MaturidadeFacade  {
+
+    private MaturidadeDao dao;
+    
+    public MaturidadeFacade() {
+    }
+
+    /**
+     * Retorna uma lista com todas as maturidades cadastradas
+     * @return
+     * @throws Exception
+     */
+    public List<Maturidade> retornaTodasMaturidade() throws Exception {
+        dao = new MaturidadeDao();
+        return dao.listaTodasMaturidade();
+    }
+
+    /**
+     * Retorna um ModeloTabelaMaturidade com todas as maturidades cadastradas
+     * @return
+     * @throws Exception
+     */
+    public ModeloTabelaMaturidade retornaModeloMaturidade() throws Exception {
+        return new ModeloTabelaMaturidade(retornaTodasMaturidade());
+    }
+
+    /**
+     * Retorna um ModelotabelaMaturidade com as maturidades pre determinadas
+     * @param lista
+     * @return
+     * @throws Exception
+     */
+    public ModeloTabelaMaturidade retornaModeloMaturidade(List<Maturidade> lista) throws Exception {
+        return new ModeloTabelaMaturidade(lista);
+    }
+
+    /**
+     * Retorna Maturidade com determinado id
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    public Maturidade retornaMaturidade(Integer id) throws Exception {
+        dao = new MaturidadeDao();
+        return dao.carregaMaturidade(id);
+    }
+
+    /**
+     * Salva Maturidade
+     * @param maturidade
+     * @throws Exception
+     */
+    public void salvarMaturidade(Maturidade maturidade) throws Exception {
+        dao = new MaturidadeDao();
+        dao.salvarMaturidade(maturidade);
+    }
+
+    /**
+     * Atualiza uma Maturidade
+     * @param maturidade
+     * @throws Exception
+     */
+    public void atualizarMaturidade(Maturidade maturidade) throws Exception {
+        dao = new MaturidadeDao();
+        dao.atualizarMaturidade(maturidade);
+    }
+
+    public void deletarMaturidade(Maturidade maturidade) throws Exception {
+        dao = new MaturidadeDao();
+        dao.deletarMaturidade(maturidade);
+    }
+
+}

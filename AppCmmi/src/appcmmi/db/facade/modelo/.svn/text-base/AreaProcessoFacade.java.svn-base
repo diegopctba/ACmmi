@@ -1,0 +1,34 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.db.facade;
+
+import appcmmi.db.dao.AreaProcessoDao;
+import appcmmi.db.pojo.AreaProcesso;
+import appcmmi.modelo.tabela.ModeloTabelaAreaProcesso;
+import java.util.List;
+
+/**
+ *
+ * @author diego
+ */
+public class AreaProcessoFacade {
+
+    private AreaProcessoDao dao;
+
+    public List<AreaProcesso> retornaTodasAreaProcesso() throws Exception {
+        dao = new AreaProcessoDao();
+        return dao.getTodasAreaProcesso();
+    }
+
+    public ModeloTabelaAreaProcesso retornaModeloTodasAreaProcesso() throws Exception {
+        return new ModeloTabelaAreaProcesso(retornaTodasAreaProcesso());
+    }
+
+    public void salvarAreaProcesso(AreaProcesso areaProcesso) throws Exception {
+        dao = new AreaProcessoDao();
+        dao.salvarAreaProcesso(areaProcesso);
+    }
+}

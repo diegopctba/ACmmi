@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Avaliacao" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="782" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="2"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA["E:\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dataFim" class="java.util.Date">
+		<fieldDescription><![CDATA[dataFim]]></fieldDescription>
+	</field>
+	<field name="comentario" class="java.lang.String">
+		<fieldDescription><![CDATA[comentario]]></fieldDescription>
+	</field>
+	<field name="avaliacaoGenericaList" class="java.lang.Object">
+		<fieldDescription><![CDATA[avaliacaoGenericaList]]></fieldDescription>
+	</field>
+	<field name="avaliacaoEspecificaList" class="java.lang.Object">
+		<fieldDescription><![CDATA[avaliacaoEspecificaList]]></fieldDescription>
+	</field>
+	<field name="ativoList" class="java.util.List">
+		<fieldDescription><![CDATA[ativoList]]></fieldDescription>
+	</field>
+	<field name="dataInicio" class="java.util.Date">
+		<fieldDescription><![CDATA[dataInicio]]></fieldDescription>
+	</field>
+	<field name="idempresa" class="java.lang.String">
+		<fieldDescription><![CDATA[idempresa]]></fieldDescription>
+	</field>
+	<field name="idmaturidade" class="java.lang.String">
+		<fieldDescription><![CDATA[idmaturidade]]></fieldDescription>
+	</field>
+	<field name="senha" class="java.lang.String">
+		<fieldDescription><![CDATA[senha]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement key="rectangle-1" mode="Opaque" x="0" y="7" width="782" height="37" backcolor="#FFFFCC"/>
+			</rectangle>
+			<staticText>
+				<reportElement key="staticText-1" x="2" y="8" width="780" height="36"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Auditoria CMMi]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText-2" x="2" y="2" width="45" height="13"/>
+				<textElement/>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="47" y="2" width="464" height="18"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{idempresa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText-3" x="511" y="2" width="39" height="21"/>
+				<textElement/>
+				<text><![CDATA[Nível]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="550" y="2" width="232" height="18"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+$F{idmaturidade}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="3" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-1" stretchType="RelativeToBandHeight" x="2" y="2" width="780" height="46" isRemoveLineWhenBlank="true"/>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$F{avaliacaoEspecificaList}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["/home/diego/NetBeansProjects/AppCmmi/src/appcmmi/funcoes/report/especifica.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="61">
+			<subreport>
+				<reportElement x="0" y="0" width="779" height="56"/>
+				<subreportParameter name="avaliacaoGenericaList">
+					<subreportParameterExpression><![CDATA[$F{avaliacaoGenericaList}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$F{avaliacaoGenericaList}]]></dataSourceExpression>
+				<subreportExpression class="java.lang.String"><![CDATA["/home/diego/NetBeansProjects/AppCmmi/src/appcmmi/funcoes/report/generica.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="2" y="0" width="139" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="662" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Página "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="742" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="20" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="742" y="0" width="40" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="662" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Página "+$V{PAGE_NUMBER}+" de "]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy HH:mm:ss">
+				<reportElement x="2" y="0" width="139" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band height="141" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="0" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Início:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="102" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{dataInicio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="202" y="0" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Finalização:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="20" width="200" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comentários / Considerações:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="302" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[$F{dataFim}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2" y="40" width="780" height="97"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{comentario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

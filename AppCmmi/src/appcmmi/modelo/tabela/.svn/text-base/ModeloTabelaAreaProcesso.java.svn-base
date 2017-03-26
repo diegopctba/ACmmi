@@ -1,0 +1,68 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.modelo.tabela;
+
+import appcmmi.db.pojo.AreaProcesso;
+import appcmmi.modelo.lista.ListaAreaProcesso;
+import java.util.List;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.TableModel;
+
+/**
+ *
+ * @author diego
+ */
+public class ModeloTabelaAreaProcesso extends ListaAreaProcesso implements TableModel {
+
+    private String[] colunas = {"Área de Processo","Descrição"};
+
+    public ModeloTabelaAreaProcesso() {
+    }
+
+    public ModeloTabelaAreaProcesso(List<AreaProcesso> lista) {
+        super(lista);
+    }
+
+    public int getRowCount() {
+        return getSize();
+    }
+
+    public int getColumnCount() {
+        return colunas.length;
+    }
+
+    public String getColumnName(int arg0) {
+        return colunas[arg0];
+    }
+
+    public Class<?> getColumnClass(int arg0) {
+        return colunas[arg0].getClass();
+    }
+
+    public boolean isCellEditable(int arg0, int arg1) {
+        return false;
+    }
+
+    public Object getValueAt(int arg0, int arg1) {
+        if (arg1 == 0) {
+            return getNumAreaProcesso(arg0);
+        } else if (arg1 == 1) {
+            return getDescricao(arg0);
+        } else {
+            return "";
+        }
+    }
+
+    public void setValueAt(Object arg0, int arg1, int arg2) {
+    }
+
+    public void addTableModelListener(TableModelListener arg0) {
+    }
+
+    public void removeTableModelListener(TableModelListener arg0) {
+    }
+
+}

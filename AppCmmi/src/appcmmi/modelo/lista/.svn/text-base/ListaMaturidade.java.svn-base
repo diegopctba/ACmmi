@@ -1,0 +1,108 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package appcmmi.modelo.lista;
+
+import appcmmi.modelo.*;
+import appcmmi.db.pojo.Maturidade;
+import java.util.List;
+import javax.swing.event.ListDataListener;
+
+/**
+ *
+ * @author diego
+ */
+public class ListaMaturidade extends ListaModelo {
+
+    private List<Maturidade> maturidade;
+
+
+    public ListaMaturidade() {
+    }
+
+    public ListaMaturidade(List<Maturidade> maturidade) {
+        this.maturidade = maturidade;
+    }
+
+    /**
+     * Retorna o tamanho da lista
+     * @return
+     */
+    public int getSize() {
+        return maturidade.size();
+    }
+
+    /**
+     * Retorna o objeto de uma determinada posição da lista
+     * @param arg0
+     * @return
+     */
+    public Maturidade getElementAt(int arg0) {
+        return (Maturidade)maturidade.get(arg0);
+    }
+
+    /**
+     * Insere um objeto numa determinada posição
+     * @param objeto
+     * @param posicao
+     */
+    public void setElementAt(Object objeto, int posicao) {
+        this.maturidade.add(posicao, (Maturidade) objeto);
+    }
+
+    /**
+     * Insere um novo objeto ao final da lista
+     * @param objeto
+     */
+    public void addElement(Object objeto) {
+        this.maturidade.add((Maturidade) objeto);
+    }
+
+    public void addListDataListener(ListDataListener arg0) {
+    }
+
+    public void removeListDataListener(ListDataListener arg0) {
+    }
+
+    /**
+     * Retorna a lista completa dos objetos.
+     * @return
+     */
+    @Override
+    public List<Maturidade> getList() {
+        return this.maturidade;
+    }
+
+    /**
+     * Seta a lista com os valores passados no parâmetro
+     * @param lista
+     */
+    @Override
+    public void setList(List lista) {
+        maturidade = lista;
+    }
+    
+    /**
+     * Retorna o ID da Maturidade de uma determinada posição
+     * @param posicao
+     * @return
+     */
+    public Integer getNumMaturidade(int posicao) {
+        return maturidade.get(posicao).getNummaturidade();
+    }
+
+    /**
+     * Retorna a Descrição da Maturidade de uma determinada posição
+     * @param posicao
+     * @return
+     */
+    public String getDescricao(int posicao) {
+        return maturidade.get(posicao).getDescmaturidade();
+    }
+    
+    public Integer getIdMaturidade(int posicao) {
+        return maturidade.get(posicao).getIdmaturidade();
+    }
+}
+

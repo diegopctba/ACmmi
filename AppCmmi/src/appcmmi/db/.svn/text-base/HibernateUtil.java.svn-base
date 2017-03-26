@@ -1,0 +1,59 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.db;
+
+
+import org.hibernate.Session;
+import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.stat.Statistics;
+
+/**
+ * Hibernate Utility class with a convenient method to get Session Factory object.
+ *
+ * @author diego
+ */
+public class HibernateUtil {
+
+
+    private static SessionFactory factory;
+    private static ThreadLocal<Session> sessions = new ThreadLocal<Session>();
+
+    static {
+            // Create the SessionFactory from standard (hibernate.cfg.xml) 
+            // config file.
+            Configuration configuration = new AnnotationConfiguration();
+            configuration.configure();
+
+
+            factory = configuration.buildSessionFactory();
+
+    }
+
+    public static Session openSession() {
+        if (sessions.get() != null) {
+            sessions.get().close();
+            sessions.set(null);
+        }
+        sessions.set(factory.openSession());
+
+        return sessions.get();
+    }
+
+    public static void closeCurrentSession() {
+        sessions.get().close();
+        sessions.set(null);
+    }
+
+    public static Session currentSession() {
+        return sessions.get();
+    }
+
+    public static Statistics getStatistics() {
+        return factory.getStatistics();
+    }
+}

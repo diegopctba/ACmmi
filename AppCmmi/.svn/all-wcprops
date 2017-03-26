@@ -1,0 +1,27 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 33
+/svn/appcmmi~subversion/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/appcmmi~subversion/!svn/ver/4/AppCmmi
+END
+manifest.mf
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/appcmmi~subversion/!svn/ver/2/AppCmmi/manifest.mf
+END
+build-before-profiler.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/appcmmi~subversion/!svn/ver/2/AppCmmi/build-before-profiler.xml
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/appcmmi~subversion/!svn/ver/2/AppCmmi/build.xml
+END

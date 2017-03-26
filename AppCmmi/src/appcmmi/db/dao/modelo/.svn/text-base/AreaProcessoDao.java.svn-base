@@ -1,0 +1,44 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package appcmmi.db.dao;
+
+import appcmmi.db.pojo.AreaProcesso;
+import java.util.ArrayList;
+import java.util.List;
+import org.hibernate.Query;
+
+/**
+ *
+ * @author diego
+ */
+public class AreaProcessoDao extends Dao {
+
+    public AreaProcessoDao() {
+        super(AreaProcesso.class);
+    }
+
+    public void salvarAreaProcesso(AreaProcesso areaProcesso) throws Exception {
+        super.salvar(areaProcesso);
+    }
+
+    public void atualizarAreaProcesso(AreaProcesso areaProcesso) throws Exception {
+        super.atualizar(areaProcesso);
+    }
+
+    public AreaProcesso getAreaProcessoId(Integer id) throws Exception {
+        return (AreaProcesso) super.carregar(id);
+    }
+
+    public List<AreaProcesso> getTodasAreaProcesso() throws Exception {
+        List<AreaProcesso> lista = new ArrayList<AreaProcesso>();
+        StringBuffer sql = new StringBuffer("SELECT ap FROM ");
+        sql.append(AreaProcesso.class.getName());
+        sql.append(" ap ");
+        Query query = session.createQuery(sql.toString());
+        lista = query.list();
+        return lista;
+    }
+}
